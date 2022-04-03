@@ -87,7 +87,7 @@ header h2{
     border-radius: 10px;
     background-color: var(--thirdColor);
     border:5px solid var(--secondaryColor);
-    color: v ;
+    cursor: pointer;
 
 }
 

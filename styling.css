@@ -1,0 +1,27 @@
+:root{
+    --mainColor: #3A1772;
+    --secondaryColor:#0CF574;
+    --thirdColor:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Carter One', cursive;
+    background-color: var(--mainColor) ;
+    color: var(--secondaryColor);
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+}

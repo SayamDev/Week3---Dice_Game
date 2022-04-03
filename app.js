@@ -6,6 +6,8 @@
 let diceButton = document.getElementById("dice_btn");
 let diceImage = document.getElementById("diceImage");
 let urScore = document.getElementById("your_score");
+let h1 = document.querySelector(".title")
+let wrapper = document.getElementById("dice_game")
 
 const diceSound = document.getElementById("diceSound")
 
@@ -40,8 +42,15 @@ diceButton.addEventListener("click", () => { //added click event to button
 
 
     if (score >= win) {
-        urScore.innerText = `${diceRoll} You have won`;
-        
+        urScore.innerText = `${diceRoll} You have Won`;
+        urScore.style.color = "#0CF574";
+        h1.style.color = "#0CF574"
+        wrapper.style.borderColor = "#0CF574";
+    } else if (diceRoll === 1 ){//strict operator
+        urScore.innerText = `${diceRoll} You have Lost`;
+        urScore.style.color = "red";
+        h1.style.color = "red";
+        wrapper.style.borderColor = "red";
     }
 })
 

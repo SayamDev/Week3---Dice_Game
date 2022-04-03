@@ -26,9 +26,10 @@ body{
     height: 100vh;
 }
 
-#dice_game{
-    border: 10px solid red;
-    
+
+
+header{
+    margin-bottom: 50px;
 }
 .title {
     font-size: 5.5rem;
@@ -44,6 +45,12 @@ header h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 5px;
     text-align: center;
+}
+
+.aim{
+    color: #0CF574;
+    text-decoration: double 2px;
+    text-decoration-line: underline;
 }
 
 .score{
@@ -68,5 +75,17 @@ header h2{
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
-    
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    background-color: var(--thirdColor);
+    border:5px solid var(--secondaryColor);
+    color: v ;
+
 }

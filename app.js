@@ -31,7 +31,7 @@ const sixImgs = {
 //assigning variables
 let diceRoll = 0;
 let score = 0;
-let win = 30
+let win = 30;
 
 diceButton.addEventListener("click", () => { //added click event to button
     let diceRoll = Math.floor(Math.random() *6 + 1); //will generate random numbers between 1-6
@@ -53,6 +53,7 @@ diceButton.addEventListener("click", () => { //added click event to button
         diceButton.style.display="none"
         reload.style.display = "block";//reload
         score=0;//restart score
+        diceSound.src = "sound/winner.wav";
     } else if (diceRoll === 1 ){//strict operator
         urScore.innerText = `${diceRoll} You have Lost`;
         urScore.style.color = "red";
@@ -69,6 +70,9 @@ diceButton.addEventListener("click", () => { //added click event to button
 reload.addEventListener("click", () => {
     window.location.reload()
 })
+
+
+//facing error - need to resolve - when win = it shows the number of img instead.
 
 
 

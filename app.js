@@ -30,14 +30,14 @@ const sixImgs = {
 
 //assigning variables
 let diceRoll = 0;
-let score = 0;
-let win = 30;
+let scoreTotal = 0;
+const winner = 30;
 
 diceButton.addEventListener("click", () => { //added click event to button
     let diceRoll = Math.floor(Math.random() *6 + 1); //will generate random numbers between 1-6
     diceImage.src = sixImgs[diceRoll]; //targeted "diceImage" src attribute , allowing me to return the value src attributes of the images inside the id = diceImage & then assigning diceRoll to the object sixImgs
-    score += diceRoll; // adding the value of diceRoll to score variable
-    urScore.innerText = score; // will show the result of score in the "your_score element int the HTML"
+    scoreTotal += diceRoll; // adding the value of diceRoll to score variable
+    urScore.innerText = scoreTotal; // will show the result of score in the "your_score element int the HTML"
     urScore.style.marginLeft = "20px";//style element
     urScore.style.paddingLeft = "100px";//style element
     urScore.style.fontSize = "1.9rem";//style element
@@ -45,15 +45,16 @@ diceButton.addEventListener("click", () => { //added click event to button
 
 
 
-    if (score >= win) {
-        urScore.innerText = `${diceRoll} You have Won`;
+    if (scoreTotal >= 30) {
+        urScore.innerText = `${scoreTotal} You have Won`;
         urScore.style.color = "#0CF574";
         h1.style.color = "#0CF574"
         wrapper.style.borderColor = "#0CF574";
         diceButton.style.display="none"
         reload.style.display = "block";//reload
-        score=0;//restart score
+        scoreTotal=0;//restart score
         diceSound.src = "sound/winner.wav";
+        
     } else if (diceRoll === 1 ){//strict operator
         urScore.innerText = `${diceRoll} You have Lost`;
         urScore.style.color = "red";
@@ -61,7 +62,7 @@ diceButton.addEventListener("click", () => { //added click event to button
         wrapper.style.borderColor = "red";
         diceButton.style.display="none"
         reload.style.display = "block";
-        score=0;
+        scoreTotal=0;
         loserSound.src = "sound/loser.wav";
     }
 });

@@ -1,9 +1,10 @@
 :root{
     --mainColor: #3A1772;
-    --secondaryColor:#0CF574;
+    --secondaryColor:#efefef;
     --thirdColor:#ffffff;
 }
 
+/*--secondaryColor:#0CF574;*/
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +27,12 @@ body{
     height: 100vh;
 }
 
+
+#dice_game{
+    border: 5px solid #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+}
 
 
 header{
@@ -93,7 +100,7 @@ header h2{
 
 
 #your_score{
-    font-size: 3rem;
+    font-size: 1.9rem;
     margin-left: 20px;
     padding-left: 100px;
     bottom: -10px;

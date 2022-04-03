@@ -26,16 +26,23 @@ const sixImgs = {
 //assigning variables
 let diceRoll = 0;
 let score = 0;
+let win = 30
 
 diceButton.addEventListener("click", () => { //added click event to button
     let diceRoll = Math.floor(Math.random() *6 + 1); //will generate random numbers between 1-6
     diceImage.src = sixImgs[diceRoll]; //targeted "diceImage" src attribute , allowing me to return the value src attributes of the images inside the id = diceImage & then assigning diceRoll to the object sixImgs
     score += diceRoll; // adding the value of diceRoll to score variable
-    urScore.textContent = score; // will show the result of score in the "your_score element int the HTML"
+    urScore.innerText = score; // will show the result of score in the "your_score element int the HTML"
     urScore.style.marginLeft = "20px";//style element
     urScore.style.paddingLeft = "100px";//style element
-    urScore.style.fontSize = "3rem";//style element
+    urScore.style.fontSize = "1.9rem";//style element
     diceSound.src = "sound/roll.wav";//dice sound
+
+
+    if (score >= win) {
+        urScore.innerText = `${diceRoll} You have won`;
+        
+    }
 })
 
 

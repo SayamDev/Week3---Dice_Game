@@ -99,6 +99,20 @@ header h2{
 
 }
 
+.btn_restart{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    background-color: var(--thirdColor);
+    border:5px solid var(--secondaryColor);
+    cursor: pointer;
+    
+
+}
+
 
 #your_score{
     font-size: 1.9rem;

@@ -20,20 +20,22 @@
 
         <header>
             <h1 class="title">Dice Game</h1>
-            <h2>Reach 30 to WIN!</h2>
-            <h2>Roll 1, you LOSE!</h2>
+            <h2>Reach <span class="aim">30</span>, to WIN!</h2>
+            <h2>Roll <span class="aim">1</span>, you LOSE!</h2>
         </header>   
 
         <div class="score">
-            You're Score: <h3 id="your_score"></h3>
+        <p>You're Score:<span id="your_score">0</span></p> 
         </div>
 
         <div id="dice_img">
-            <img src="/images/dice1.png" alt="dice roll 1" id="image">
+            <img src="/images/dice1.png" alt="dice roll 1" id="diceImage" class="diceImg">
         </div>
 
         <p class="instruction"> Click on the button below to start the game</p>
-        <button id="dice_btn">Roll the Dice</button>
+        <button id="dice_btn" class="btn">Roll
+            <audio src="" id="diceSound" autoplay="false"></audio>
+        </button>
     </main>
 
    
